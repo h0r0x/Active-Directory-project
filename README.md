@@ -55,7 +55,7 @@ To understand the structure and purpose of each component in the Active Director
 
 ## **Diagram**
 
-![Diagram.drawio.png](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Diagram.drawio.png)
+![Diagram.drawio.png](Active%20Directory%20Project%/Diagram.drawio.png)
 
 With the theoretical framework established, the diagram illustrates the relationship between these components in a controlled lab environment:
 
@@ -89,7 +89,7 @@ The "Environment Setup" chapter provides a thorough guide to replicating the vir
 
 Now its time to create the VM that we are going to use in this project.
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled.png)
+![Untitled](Active%20Directory%20Project%/Untitled.png)
 
 Following the instruction for every machine.
 
@@ -128,15 +128,15 @@ Following the instruction for every machine.
 - Click "OK" to apply the changes.
 - Click "Start" to begin the installation. Follow the on-screen prompts to install Windows Server 2022, and set a secure administrator password.
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%201.png)
+![Untitled](Active%20Directory%20Project%/Untitled%201.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%202.png)
+![Untitled](Active%20Directory%20Project%/Untitled%202.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%203.png)
+![Untitled](Active%20Directory%20Project%/Untitled%203.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%204.png)
+![Untitled](Active%20Directory%20Project%/Untitled%204.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%205.png)
+![Untitled](Active%20Directory%20Project%/Untitled%205.png)
 
 ### **Splunk Server (Ubuntu)**
 
@@ -173,29 +173,29 @@ Following the instruction for every machine.
 - Click "OK" to apply the changes.
 - Click "Start" and follow the installation prompts to install Windows 10.
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%206.png)
+![Untitled](Active%20Directory%20Project%/Untitled%206.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%207.png)
+![Untitled](Active%20Directory%20Project%/Untitled%207.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%208.png)
+![Untitled](Active%20Directory%20Project%/Untitled%208.png)
 
-![Chose your language](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%209.png)
+![Chose your language](Active%20Directory%20Project%/Untitled%209.png)
 
 Chose your language
 
-![Click “install now”](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2010.png)
+![Click “install now”](Active%20Directory%20Project%/Untitled%2010.png)
 
 Click “install now”
 
-![Click “I don’ have a product key”](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2011.png)
+![Click “I don’ have a product key”](Active%20Directory%20Project%/Untitled%2011.png)
 
 Click “I don’ have a product key”
 
-![Select “Windows 10 Pro”](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2012.png)
+![Select “Windows 10 Pro”](Active%20Directory%20Project%/Untitled%2012.png)
 
 Select “Windows 10 Pro”
 
-![Click on “Custom Install”](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2013.png)
+![Click on “Custom Install”](Active%20Directory%20Project%/Untitled%2013.png)
 
 Click on “Custom Install”
 
@@ -221,7 +221,7 @@ To create it:
     - **DHCP Server:** Check "Enable DHCP Server".
 - Click "Apply," then "Close."
 
-![Parameters of the new NAT network.](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2014.png)
+![Parameters of the new NAT network.](Active%20Directory%20Project%/Untitled%2014.png)
 
 Parameters of the new NAT network.
 
@@ -239,7 +239,7 @@ To do it:
 - Choose the newly created **`AD-Project`** from the "Name" drop-down.
 - Click "OK."
     
-    ![Example of updated network settings of “Splunk” VM after update them.](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2015.png)
+    ![Example of updated network settings of “Splunk” VM after update them.](Active%20Directory%20Project%/Untitled%2015.png)
     
     Example of updated network settings of “Splunk” VM after update them.
     
@@ -272,14 +272,14 @@ Static IP configuration assigns specific IP addresses to essential servers like 
     	version: 2
     ```
     
-    ![Screenshot of the configuration file **`/etc/netplan/01-netcfg.yaml`** after update it**.**](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/2cd7d4c4-ce5b-4bb6-ba8e-908d12e58c2d.png)
+    ![Screenshot of the configuration file **`/etc/netplan/01-netcfg.yaml`** after update it**.**](Active%20Directory%20Project%/2cd7d4c4-ce5b-4bb6-ba8e-908d12e58c2d.png)
     
     Screenshot of the configuration file **`/etc/netplan/01-netcfg.yaml`** after update it**.**
     
 - Press **`Ctrl+X`**, then **`Y`** to save and exit.
 - Apply the configuration using **`sudo netplan apply`**.
     
-    ![Now we have a static ip (check it with ip a) and we are online.](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2016.png)
+    ![Now we have a static ip (check it with ip a) and we are online.](Active%20Directory%20Project%/Untitled%2016.png)
     
     Now we have a static ip (check it with ip a) and we are online.
     
@@ -317,20 +317,20 @@ This configuration sets up a static IPv4 address (**`192.168.10.10`**) with a su
 - Do the same steps for the Windows pc (victim) → setup its IP to a prefered one and then rename its name to `**target-pc**`
     
     
-    ![Change the IP address on the Victim machine](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2017.png)
+    ![Change the IP address on the Victim machine](Active%20Directory%20Project%/Untitled%2017.png)
     
     Change the IP address on the Victim machine
     
-    ![Remame of the Victim machine](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2018.png)
+    ![Remame of the Victim machine](Active%20Directory%20Project%/Untitled%2018.png)
     
     Remame of the Victim machine
     
 
 ### Kali Linux (Attacker)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2019.png)
+![Untitled](Active%20Directory%20Project%/Untitled%2019.png)
 
-![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2020.png)
+![Untitled](Active%20Directory%20Project%/Untitled%2020.png)
 
 ---
 
@@ -368,7 +368,7 @@ Splunk is a software platform used for monitoring, searching, analyzing, and vis
     
     To access the Splunk Web Interface typically available at **`http://<Your-Splunk-Server-IP>:8000`**.
     
-    ![Type 192.168.10.10:8000 to access to Splunk Web Interface](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2021.png)
+    ![Type 192.168.10.10:8000 to access to Splunk Web Interface](Active%20Directory%20Project%/Untitled%2021.png)
     
     Type 192.168.10.10:8000 to access to Splunk Web Interface
     
@@ -388,22 +388,22 @@ Sysmon (System Monitor) is a Windows system service and device driver that monit
         sysmon -i sysmonconfig.xml
         ```
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2022.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2022.png)
         
     
 2. **Install Splunk Universal Forwarder on Windows Server and Windows 10:**
     - Download the Splunk Universal Forwarder installer for Windows ([https://www.splunk.com/en_us/download/universal-forwarder.html](https://www.splunk.com/en_us/download/universal-forwarder.html)).
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2023.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2023.png)
         
     - Run the installer and follow the setup wizard:
         - Create an administrator account with a random password
             
-            ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2024.png)
+            ![Untitled](Active%20Directory%20Project%/Untitled%2024.png)
             
         - Specify the Splunk receiver settings (IP of your Splunk server and receiving port, typically 9997).
             
-            ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2025.png)
+            ![Untitled](Active%20Directory%20Project%/Untitled%2025.png)
             
     
     ### **Instruct the splunk forwarder**
@@ -444,15 +444,15 @@ Sysmon (System Monitor) is a Windows system service and device driver that monit
     - Look for the Splunk forwarder service and modify its “startup type” → Services > search the SplunkForwarder > Properties > Log On > Log on as: Local System account
         
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2026.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2026.png)
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2027.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2027.png)
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2028.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2028.png)
         
     - And then restart the service
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2029.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2029.png)
         
     
 
@@ -462,31 +462,31 @@ These installations and configurations establish a foundational monitoring frame
 
 - Using the **`http://<Your-Splunk-Server-IP>:8000`** login to the Splunk Web Interface
     
-    ![Type 192.168.10.10:8000 to access to Splunk Web Interface](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2021.png)
+    ![Type 192.168.10.10:8000 to access to Splunk Web Interface](Active%20Directory%20Project%/Untitled%2021.png)
     
     Type 192.168.10.10:8000 to access to Splunk Web Interface
     
 - Now go to settings > indexes
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2030.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2030.png)
     
 - All log files are sent to an index called endpoind (we specify it in `inputs.conf`) so now we create this → “New index” > name it `endpoint`
     
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2031.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2031.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2032.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2032.png)
     
 - Finnaly we have to ensure that ur splunk server is able to recive the data → Forwarding and reciving > Configure reciving > New reciving port > listen on port 9997
     
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2033.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2033.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2034.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2034.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2035.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2035.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2036.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2036.png)
     
 
 ## **Active Directory Installation**
@@ -503,23 +503,23 @@ Active Directory (AD) is a directory service developed by Microsoft for Windows 
     - Check the box for 'Active Directory Domain Services'. When prompted to add features that are required for AD DS, click 'Add Features', then 'Next'.
         
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2037.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2037.png)
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2038.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2038.png)
         
     - Continue clicking 'Next' without changing default selections until you reach the 'Install' button. Click 'Install'.
 3. **Promote the server to a domain controller:**
     - After installation, in the 'Server Manager' dashboard, you will see a notification flag near the top-right. Click on it and select 'Promote this server to a domain controller'.
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2039.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2039.png)
         
     - Select 'Add a new forest' and type the Root domain name (e.g., `h0rox.local`).
         
-        ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2040.png)
+        ![Untitled](Active%20Directory%20Project%/Untitled%2040.png)
         
     - Set a DSRM (Directory Services Restore Mode) password—this is crucial for recovery operations.
         
-        ![Set a new Password = Password1234](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2041.png)
+        ![Set a new Password = Password1234](Active%20Directory%20Project%/Untitled%2041.png)
         
         Set a new Password = Password1234
         
@@ -535,20 +535,20 @@ After rebooting, you can log in with the domain admin credentials to configure u
 - Tools > Active Directory Users and Computers
 - Click on the domain > New > Organizational Unit
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2042.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2042.png)
     
 - Create a new Organizational Unit (for example **`IT`**)
 - In this new Organizational Unit (`**IT**`) new > User and then create a new user with name, surname, username and password
 - Do this for another time to create another Organizational Unit (**`HR`**) and another user
     
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2043.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2043.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2044.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2044.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2045.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2045.png)
     
-    ![Password1234](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2046.png)
+    ![Password1234](Active%20Directory%20Project%/Untitled%2046.png)
     
     Password1234
     
@@ -560,20 +560,20 @@ So now, after we create a new domain we have to connect our pc to this new domai
 - First change the DNS server address: we have to update our DNS server address to the one of the AD server (`192.168.10.7`)
     
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2047.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2047.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2048.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2048.png)
     
 - Then change the domain: PC > Advance system settings > Computer Name > Change > change the domain to `yourdomain.LOCAL` and then enter the credentials.
     
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2049.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2049.png)
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2050.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2050.png)
     
 - Finally, login as a domain user: Other user > enter the credientials
     
-    ![Untitled](Active%20Directory%20Project%2036cf4f04528d455bb355ff23c5aa72f2/Untitled%2051.png)
+    ![Untitled](Active%20Directory%20Project%/Untitled%2051.png)
     
 
 ---
